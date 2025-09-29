@@ -1,0 +1,63 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1" />
+      <stop offset="16.66%" style="stop-color:#ff8000;stop-opacity:1" />
+      <stop offset="33.33%" style="stop-color:#ffff00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00ff00;stop-opacity:1" />
+      <stop offset="66.66%" style="stop-color:#0080ff;stop-opacity:1" />
+      <stop offset="83.33%" style="stop-color:#8000ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main rainbow border -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#rainbowGradient)" rx="20"/>
+  
+  <!-- Inner white border -->
+  <rect x="30" y="30" width="740" height="540" fill="white" rx="15"/>
+  
+  <!-- Photo area (transparent) -->
+  <rect x="60" y="60" width="680" height="480" fill="transparent" rx="10"/>
+  
+  <!-- Decorative elements with glow effect -->
+  <g filter="url(#glow)">
+    <!-- Corner stars -->
+    <polygon points="80,80 85,95 100,95 88,105 93,120 80,110 67,120 72,105 60,95 75,95" fill="#FFD700"/>
+    <polygon points="720,80 725,95 740,95 728,105 733,120 720,110 707,120 712,105 700,95 715,95" fill="#FFD700"/>
+    <polygon points="80,520 85,535 100,535 88,545 93,560 80,550 67,560 72,545 60,535 75,535" fill="#FFD700"/>
+    <polygon points="720,520 725,535 740,535 728,545 733,560 720,550 707,560 712,545 700,535 715,535" fill="#FFD700"/>
+    
+    <!-- Side sparkles -->
+    <circle cx="40" cy="150" r="6" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="760" cy="150" r="6" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="40" cy="250" r="8" fill="#FFFF00" opacity="0.8"/>
+    <circle cx="760" cy="250" r="8" fill="#FFFF00" opacity="0.8"/>
+    <circle cx="40" cy="350" r="6" fill="#00FFFF" opacity="0.8"/>
+    <circle cx="760" cy="350" r="6" fill="#00FFFF" opacity="0.8"/>
+    <circle cx="40" cy="450" r="8" fill="#FF00FF" opacity="0.8"/>
+    <circle cx="760" cy="450" r="8" fill="#FF00FF" opacity="0.8"/>
+    
+    <!-- Top and bottom sparkles -->
+    <circle cx="200" cy="40" r="5" fill="#FF0000" opacity="0.8"/>
+    <circle cx="300" cy="40" r="7" fill="#00FF00" opacity="0.8"/>
+    <circle cx="500" cy="40" r="5" fill="#0080FF" opacity="0.8"/>
+    <circle cx="600" cy="40" r="7" fill="#FF8000" opacity="0.8"/>
+    
+    <circle cx="200" cy="560" r="5" fill="#8000FF" opacity="0.8"/>
+    <circle cx="300" cy="560" r="7" fill="#FFFF00" opacity="0.8"/>
+    <circle cx="500" cy="560" r="5" fill="#FF00FF" opacity="0.8"/>
+    <circle cx="600" cy="560" r="7" fill="#00FFFF" opacity="0.8"/>
+  </g>
+  
+  <!-- Inner gradient accent -->
+  <rect x="55" y="55" width="690" height="490" fill="none" stroke="url(#rainbowGradient)" stroke-width="2" rx="12" opacity="0.7"/>
+</svg>

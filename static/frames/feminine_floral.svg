@@ -1,0 +1,76 @@
+<svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="floralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffeaa7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fab1a0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fd79a8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="petalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff7675;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="600" fill="url(#floralGrad)"/>
+  
+  <!-- Photo area (transparent) -->
+  <rect x="60" y="80" width="280" height="440" fill="transparent"/>
+  
+  <!-- Corner flower decorations -->
+  <g transform="translate(50,50)">
+    <!-- Top left flower -->
+    <circle cx="0" cy="0" r="12" fill="url(#petalGrad)"/>
+    <circle cx="-8" cy="-8" r="8" fill="#ff7675"/>
+    <circle cx="8" cy="-8" r="8" fill="#ff7675"/>
+    <circle cx="-8" cy="8" r="8" fill="#ff7675"/>
+    <circle cx="8" cy="8" r="8" fill="#ff7675"/>
+    <circle cx="0" cy="0" r="6" fill="#f1c40f"/>
+  </g>
+  
+  <g transform="translate(350,50)">
+    <!-- Top right flower -->
+    <circle cx="0" cy="0" r="12" fill="url(#petalGrad)"/>
+    <circle cx="-8" cy="-8" r="8" fill="#ff7675"/>
+    <circle cx="8" cy="-8" r="8" fill="#ff7675"/>
+    <circle cx="-8" cy="8" r="8" fill="#ff7675"/>
+    <circle cx="8" cy="8" r="8" fill="#ff7675"/>
+    <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+  </g>
+  
+  <g transform="translate(50,550)">
+    <!-- Bottom left flower -->
+    <circle cx="0" cy="0" r="12" fill="url(#petalGrad)"/>
+    <circle cx="-8" cy="-8" r="8" fill="#ff7675"/>
+    <circle cx="8" cy="-8" r="8" fill="#ff7675"/>
+    <circle cx="-8" cy="8" r="8" fill="#ff7675"/>
+    <circle cx="8" cy="8" r="8" fill="#ff7675"/>
+    <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+  </g>
+  
+  <g transform="translate(350,550)">
+    <!-- Bottom right flower -->
+    <circle cx="0" cy="0" r="12" fill="url(#petalGrad)"/>
+    <circle cx="-8" cy="-8" r="8" fill="#ff7675"/>
+    <circle cx="8" cy="-8" r="8" fill="#ff7675"/>
+    <circle cx="-8" cy="8" r="8" fill="#ff7675"/>
+    <circle cx="8" cy="8" r="8" fill="#ff7675"/>
+    <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+  </g>
+  
+  <!-- Delicate floral vines -->
+  <path d="M 80 50 Q 120 30 160 50 T 240 50 T 320 50" stroke="#e84393" stroke-width="2" fill="none"/>
+  <path d="M 80 550 Q 120 570 160 550 T 240 550 T 320 550" stroke="#e84393" stroke-width="2" fill="none"/>
+  <path d="M 50 100 Q 30 140 50 180 T 50 260 T 50 340 T 50 420 T 50 500" stroke="#e84393" stroke-width="2" fill="none"/>
+  <path d="M 350 100 Q 370 140 350 180 T 350 260 T 350 340 T 350 420 T 350 500" stroke="#e84393" stroke-width="2" fill="none"/>
+  
+  <!-- Small decorative leaves -->
+  <ellipse cx="100" cy="40" rx="8" ry="4" fill="#2ecc71" transform="rotate(45 100 40)"/>
+  <ellipse cx="300" cy="40" rx="8" ry="4" fill="#2ecc71" transform="rotate(-45 300 40)"/>
+  <ellipse cx="100" cy="560" rx="8" ry="4" fill="#2ecc71" transform="rotate(-45 100 560)"/>
+  <ellipse cx="300" cy="560" rx="8" ry="4" fill="#2ecc71" transform="rotate(45 300 560)"/>
+  
+  <!-- Elegant text -->
+  <text x="200" y="35" text-anchor="middle" fill="#2c3e50" font-family="Dancing Script, cursive" font-size="24" font-style="italic">Blossom</text>
+  <text x="200" y="585" text-anchor="middle" fill="#2c3e50" font-family="Dancing Script, cursive" font-size="16" font-style="italic">Garden Dreams</text>
+</svg>

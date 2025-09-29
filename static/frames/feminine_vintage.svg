@@ -1,0 +1,72 @@
+<svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="elegantGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8cbc0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#636fa4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8cbc0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="laceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="600" fill="url(#elegantGrad)"/>
+  
+  <!-- Photo area (transparent) -->
+  <rect x="60" y="90" width="280" height="420" fill="transparent"/>
+  
+  <!-- Ornate vintage border -->
+  <rect x="30" y="60" width="340" height="480" fill="none" stroke="#636fa4" stroke-width="3" rx="10" ry="10"/>
+  <rect x="35" y="65" width="330" height="470" fill="none" stroke="url(#laceGrad)" stroke-width="2" rx="8" ry="8"/>
+  
+  <!-- Vintage corner flourishes -->
+  <g stroke="#636fa4" stroke-width="2" fill="none">
+    <!-- Top left flourish -->
+    <path d="M 50 80 Q 60 70 70 80 M 50 80 Q 60 90 70 80 M 45 85 Q 55 75 65 85 M 45 85 Q 55 95 65 85"/>
+    <!-- Top right flourish -->
+    <path d="M 350 80 Q 340 70 330 80 M 350 80 Q 340 90 330 80 M 355 85 Q 345 75 335 85 M 355 85 Q 345 95 335 85"/>
+    <!-- Bottom left flourish -->
+    <path d="M 50 520 Q 60 530 70 520 M 50 520 Q 60 510 70 520 M 45 515 Q 55 525 65 515 M 45 515 Q 55 505 65 515"/>
+    <!-- Bottom right flourish -->
+    <path d="M 350 520 Q 340 530 330 520 M 350 520 Q 340 510 330 520 M 355 515 Q 345 525 335 515 M 355 515 Q 345 505 335 515"/>
+  </g>
+  
+  <!-- Delicate lace pattern -->
+  <g stroke="url(#laceGrad)" stroke-width="1" fill="none" opacity="0.8">
+    <path d="M 60 120 Q 80 100 100 120 Q 120 100 140 120 Q 160 100 180 120 Q 200 100 220 120 Q 240 100 260 120 Q 280 100 300 120 Q 320 100 340 120"/>
+    <path d="M 60 480 Q 80 500 100 480 Q 120 500 140 480 Q 160 500 180 480 Q 200 500 220 480 Q 240 500 260 480 Q 280 500 300 480 Q 320 500 340 480"/>
+    <path d="M 80 140 Q 60 160 80 180 Q 60 200 80 220 Q 60 240 80 260 Q 60 280 80 300 Q 60 320 80 340 Q 60 360 80 380 Q 60 400 80 420 Q 60 440 80 460"/>
+    <path d="M 320 140 Q 340 160 320 180 Q 340 200 320 220 Q 340 240 320 260 Q 340 280 320 300 Q 340 320 320 340 Q 340 360 320 380 Q 340 400 320 420 Q 340 440 320 460"/>
+  </g>
+  
+  <!-- Elegant pearls -->
+  <g fill="#f8f9fa" stroke="#e9ecef" stroke-width="1">
+    <circle cx="100" cy="100" r="4"/>
+    <circle cx="130" cy="95" r="3"/>
+    <circle cx="160" cy="100" r="4"/>
+    <circle cx="190" cy="95" r="3"/>
+    <circle cx="220" cy="100" r="4"/>
+    <circle cx="250" cy="95" r="3"/>
+    <circle cx="280" cy="100" r="4"/>
+    <circle cx="300" cy="95" r="3"/>
+    
+    <circle cx="100" cy="500" r="4"/>
+    <circle cx="130" cy="505" r="3"/>
+    <circle cx="160" cy="500" r="4"/>
+    <circle cx="190" cy="505" r="3"/>
+    <circle cx="220" cy="500" r="4"/>
+    <circle cx="250" cy="505" r="3"/>
+    <circle cx="280" cy="500" r="4"/>
+    <circle cx="300" cy="505" r="3"/>
+  </g>
+  
+  <!-- Vintage cameo centerpiece -->
+  <ellipse cx="200" cy="50" rx="25" ry="20" fill="#f8f9fa" stroke="#636fa4" stroke-width="2"/>
+  <ellipse cx="200" cy="50" rx="20" ry="15" fill="none" stroke="#adb5bd" stroke-width="1"/>
+  
+  <!-- Elegant script text -->
+  <text x="200" y="35" text-anchor="middle" fill="#636fa4" font-family="Playfair Display, serif" font-size="16" font-style="italic">Vintage</text>
+  <text x="200" y="575" text-anchor="middle" fill="#636fa4" font-family="Playfair Display, serif" font-size="14" font-style="italic">Elegance Collection</text>
+</svg>

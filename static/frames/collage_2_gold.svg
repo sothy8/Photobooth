@@ -1,0 +1,44 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer frame -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#goldGradient2)" filter="url(#shadow2)" rx="15"/>
+  
+  <!-- Inner white background -->
+  <rect x="20" y="20" width="760" height="560" fill="white" rx="10"/>
+  
+  <!-- Left photo area -->
+  <rect x="40" y="80" width="350" height="440" fill="transparent" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Right photo area -->  
+  <rect x="410" y="80" width="350" height="440" fill="transparent" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Center divider decoration -->
+  <rect x="395" y="60" width="10" height="480" fill="url(#goldGradient2)"/>
+  
+  <!-- Title area -->
+  <rect x="40" y="40" width="720" height="30" fill="rgba(255, 215, 0, 0.2)"/>
+  
+  <!-- Corner decorations -->
+  <circle cx="40" cy="80" r="8" fill="#DAA520"/>
+  <circle cx="390" cy="80" r="8" fill="#DAA520"/>
+  <circle cx="410" cy="80" r="8" fill="#DAA520"/>
+  <circle cx="760" cy="80" r="8" fill="#DAA520"/>
+  <circle cx="40" cy="520" r="8" fill="#DAA520"/>
+  <circle cx="390" cy="520" r="8" fill="#DAA520"/>
+  <circle cx="410" cy="520" r="8" fill="#DAA520"/>
+  <circle cx="760" cy="520" r="8" fill="#DAA520"/>
+  
+  <!-- Photo slot indicators (will be replaced by actual photos) -->
+  <text x="215" y="310" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="24" opacity="0.5">Photo 1</text>
+  <text x="585" y="310" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="24" opacity="0.5">Photo 2</text>
+</svg>

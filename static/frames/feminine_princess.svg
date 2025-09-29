@@ -1,0 +1,74 @@
+<svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="princessGrad" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fcb69f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee9ca7;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ecf0f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#bdc3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="600" fill="url(#princessGrad)"/>
+  
+  <!-- Decorative lace pattern -->
+  <g stroke="#ffffff" stroke-width="1" fill="none" opacity="0.6">
+    <circle cx="50" cy="50" r="15"/>
+    <circle cx="100" cy="30" r="10"/>
+    <circle cx="150" cy="40" r="12"/>
+    <circle cx="200" cy="25" r="8"/>
+    <circle cx="250" cy="40" r="12"/>
+    <circle cx="300" cy="30" r="10"/>
+    <circle cx="350" cy="50" r="15"/>
+    
+    <circle cx="50" cy="550" r="15"/>
+    <circle cx="100" cy="570" r="10"/>
+    <circle cx="150" cy="560" r="12"/>
+    <circle cx="200" cy="575" r="8"/>
+    <circle cx="250" cy="560" r="12"/>
+    <circle cx="300" cy="570" r="10"/>
+    <circle cx="350" cy="550" r="15"/>
+  </g>
+  
+  <!-- Crown at top -->
+  <g transform="translate(200,40)">
+    <path d="M -40 0 L -30 -15 L -20 -5 L -10 -20 L 0 -5 L 10 -20 L 20 -5 L 30 -15 L 40 0 Z" fill="url(#crownGrad)" stroke="#95a5a6" stroke-width="2"/>
+    <!-- Crown jewels -->
+    <circle cx="-25" cy="-10" r="3" fill="#e74c3c"/>
+    <circle cx="-5" cy="-15" r="4" fill="#3498db"/>
+    <circle cx="0" cy="-2" r="5" fill="#e91e63"/>
+    <circle cx="5" cy="-15" r="4" fill="#9b59b6"/>
+    <circle cx="25" cy="-10" r="3" fill="#2ecc71"/>
+  </g>
+  
+  <!-- Photo area (transparent) -->
+  <rect x="70" y="90" width="260" height="420" fill="transparent"/>
+  
+  <!-- Ornate border -->
+  <rect x="60" y="80" width="280" height="440" fill="none" stroke="#ff69b4" stroke-width="4" rx="20" ry="20"/>
+  <rect x="65" y="85" width="270" height="430" fill="none" stroke="#ffffff" stroke-width="2" rx="15" ry="15"/>
+  
+  <!-- Decorative swirls -->
+  <g stroke="#ff69b4" stroke-width="2" fill="none">
+    <path d="M 40 150 Q 60 130 40 110 Q 20 130 40 150"/>
+    <path d="M 360 150 Q 340 130 360 110 Q 380 130 360 150"/>
+    <path d="M 40 450 Q 60 470 40 490 Q 20 470 40 450"/>
+    <path d="M 360 450 Q 340 470 360 490 Q 380 470 360 450"/>
+  </g>
+  
+  <!-- Hearts decoration -->
+  <g fill="#ff69b4">
+    <path d="M 90,120 C 90,115 95,110 100,115 C 105,110 110,115 110,120 C 110,130 100,140 100,140 C 100,140 90,130 90,120 Z"/>
+    <path d="M 290,120 C 290,115 295,110 300,115 C 305,110 310,115 310,120 C 310,130 300,140 300,140 C 300,140 290,130 290,120 Z"/>
+    <path d="M 90,480 C 90,475 95,470 100,475 C 105,470 110,475 110,480 C 110,490 100,500 100,500 C 100,500 90,490 90,480 Z"/>
+    <path d="M 290,480 C 290,475 295,470 300,475 C 305,470 310,475 310,480 C 310,490 300,500 300,500 C 300,500 290,490 290,480 Z"/>
+  </g>
+  
+  <!-- Princess text -->
+  <text x="200" y="570" text-anchor="middle" fill="#d63384" font-family="Brush Script MT, cursive" font-size="28" font-style="italic">Princess</text>
+  <text x="200" y="590" text-anchor="middle" fill="#d63384" font-family="Dancing Script, cursive" font-size="14">Royal Collection</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainbow6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#ff8000;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#ffff00;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#00ff00;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#0080ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8000ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#rainbow6)" rx="20"/>
+  
+  <!-- Inner white background -->
+  <rect x="25" y="25" width="750" height="550" fill="white" rx="15"/>
+  
+  <!-- 6 photo areas in 2x3 grid -->
+  <!-- Top row -->
+  <rect x="50" y="60" width="230" height="160" fill="transparent" stroke="#666" stroke-width="2"/>
+  <rect x="290" y="60" width="230" height="160" fill="transparent" stroke="#666" stroke-width="2"/>
+  <rect x="530" y="60" width="230" height="160" fill="transparent" stroke="#666" stroke-width="2"/>
+  
+  <!-- Bottom row -->
+  <rect x="50" y="240" width="230" height="160" fill="transparent" stroke="#666" stroke-width="2"/>
+  <rect x="290" y="240" width="230" height="160" fill="transparent" stroke="#666" stroke-width="2"/>
+  <rect x="530" y="240" width="230" height="160" fill="transparent" stroke="#666" stroke-width="2"/>
+  
+  <!-- Vertical dividers -->
+  <rect x="285" y="60" width="5" height="340" fill="url(#rainbow6)"/>
+  <rect x="525" y="60" width="5" height="340" fill="url(#rainbow6)"/>
+  
+  <!-- Horizontal divider -->
+  <rect x="50" y="225" width="710" height="10" fill="url(#rainbow6)"/>
+  
+  <!-- Title area -->
+  <rect x="50" y="420" width="710" height="120" fill="rgba(255, 255, 255, 0.8)" rx="10"/>
+  <text x="405" y="460" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Photo Memories</text>
+  <text x="405" y="490" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="16">Six Special Moments</text>
+  
+  <!-- Star decorations -->
+  <g fill="#FFD700">
+    <polygon points="165,140 170,155 185,155 173,165 178,180 165,170 152,180 157,165 145,155 160,155"/>
+    <polygon points="405,140 410,155 425,155 413,165 418,180 405,170 392,180 397,165 385,155 400,155"/>
+    <polygon points="645,140 650,155 665,155 653,165 658,180 645,170 632,180 637,165 625,155 640,155"/>
+    <polygon points="165,320 170,335 185,335 173,345 178,360 165,350 152,360 157,345 145,335 160,335"/>
+    <polygon points="405,320 410,335 425,335 413,345 418,360 405,350 392,360 397,345 385,335 400,335"/>
+    <polygon points="645,320 650,335 665,335 653,345 658,360 645,350 632,360 637,345 625,335 640,335"/>
+  </g>
+  
+  <!-- Photo slot indicators -->
+  <text x="165" y="145" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="16" opacity="0.5">1</text>
+  <text x="405" y="145" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="16" opacity="0.5">2</text>
+  <text x="645" y="145" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="16" opacity="0.5">3</text>
+  <text x="165" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="16" opacity="0.5">4</text>
+  <text x="405" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="16" opacity="0.5">5</text>
+  <text x="645" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="16" opacity="0.5">6</text>
+</svg>

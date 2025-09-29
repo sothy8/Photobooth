@@ -1,0 +1,54 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="heartPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#FFE4E6"/>
+      <path d="M20 30c-5-10 -15-10 -15 0c0 5 15 15 15 15s15-10 15-15c0-10 -10-10 -15 0z" fill="#FF69B4" opacity="0.6"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Heart pattern border -->
+  <rect x="0" y="0" width="800" height="80" fill="url(#heartPattern)"/>
+  <rect x="0" y="520" width="800" height="80" fill="url(#heartPattern)"/>
+  <rect x="0" y="0" width="80" height="600" fill="url(#heartPattern)"/>
+  <rect x="720" y="0" width="80" height="600" fill="url(#heartPattern)"/>
+  
+  <!-- Photo area (transparent) -->
+  <rect x="80" y="80" width="640" height="440" fill="transparent"/>
+  
+  <!-- Decorative hearts around the border -->
+  <g filter="url(#glow)">
+    <!-- Top hearts -->
+    <path d="M150 40c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF1493"/>
+    <path d="M400 40c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF1493"/>
+    <path d="M650 40c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF1493"/>
+    
+    <!-- Bottom hearts -->
+    <path d="M150 560c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF1493"/>
+    <path d="M400 560c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF1493"/>
+    <path d="M650 560c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF1493"/>
+    
+    <!-- Side hearts -->
+    <path d="M40 200c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF69B4"/>
+    <path d="M40 300c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF69B4"/>
+    <path d="M40 400c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF69B4"/>
+    
+    <path d="M760 200c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF69B4"/>
+    <path d="M760 300c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF69B4"/>
+    <path d="M760 400c-8-15 -25-15 -25 0c0 8 25 25 25 25s25-17 25-25c0-15 -17-15 -25 0z" fill="#FF69B4"/>
+  </g>
+  
+  <!-- Corner decorations -->
+  <g fill="#FFB6C1">
+    <circle cx="80" cy="80" r="10"/>
+    <circle cx="720" cy="80" r="10"/>
+    <circle cx="80" cy="520" r="10"/>
+    <circle cx="720" cy="520" r="10"/>
+  </g>
+</svg>

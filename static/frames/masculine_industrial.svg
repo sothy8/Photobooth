@@ -1,0 +1,41 @@
+<svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#34495e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a252f;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="metalTexture" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="#34495e"/>
+      <circle cx="2" cy="2" r="0.5" fill="#2c3e50"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="600" fill="url(#metalGrad)"/>
+  
+  <!-- Metal texture overlay -->
+  <rect width="400" height="600" fill="url(#metalTexture)" opacity="0.3"/>
+  
+  <!-- Corner bolts -->
+  <circle cx="30" cy="30" r="8" fill="#1a252f" stroke="#7f8c8d" stroke-width="2"/>
+  <circle cx="370" cy="30" r="8" fill="#1a252f" stroke="#7f8c8d" stroke-width="2"/>
+  <circle cx="30" cy="570" r="8" fill="#1a252f" stroke="#7f8c8d" stroke-width="2"/>
+  <circle cx="370" cy="570" r="8" fill="#1a252f" stroke="#7f8c8d" stroke-width="2"/>
+  
+  <!-- Industrial borders -->
+  <rect x="15" y="15" width="370" height="570" fill="none" stroke="#7f8c8d" stroke-width="3"/>
+  <rect x="25" y="25" width="350" height="550" fill="none" stroke="#95a5a6" stroke-width="1"/>
+  
+  <!-- Photo area (transparent) -->
+  <rect x="50" y="80" width="300" height="440" fill="transparent"/>
+  
+  <!-- Title bar -->
+  <rect x="50" y="30" width="300" height="40" fill="url(#metalGrad)" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="200" y="55" text-anchor="middle" fill="#ecf0f1" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold">INDUSTRIAL</text>
+  
+  <!-- Bottom info bar -->
+  <rect x="50" y="530" width="300" height="30" fill="url(#metalGrad)" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="70" y="550" fill="#bdc3c7" font-family="Arial, sans-serif" font-size="12">PHOTOBOOTH STUDIO</text>
+  <text x="330" y="550" text-anchor="end" fill="#bdc3c7" font-family="Arial, sans-serif" font-size="12">2025</text>
+</svg>

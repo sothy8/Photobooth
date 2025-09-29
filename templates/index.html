@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📸 PhotoBooth Studio Pro</title>
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Professional PhotoBooth Studio - Capture, Create, and Print Beautiful Memories">
+    <meta name="keywords" content="photobooth, professional photography, frames, instant print">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="brand-section">
+                <h1 class="logo">
+                    <i class="fas fa-camera-retro"></i>
+                    <span class="logo-text">
+                        <span class="logo-main">PhotoBooth</span>
+                        <span class="logo-sub">STUDIO PRO</span>
+                    </span>
+                </h1>
+                <div class="tagline">Professional Photography Experience</div>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-section="camera">
+                    <i class="fas fa-camera"></i> 
+                    <span>Camera</span>
+                </button>
+                <button class="nav-btn" data-section="upload">
+                    <i class="fas fa-cloud-upload-alt"></i> 
+                    <span>Upload</span>
+                </button>
+                <button class="nav-btn" data-section="gallery">
+                    <i class="fas fa-images"></i> 
+                    <span>Gallery</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Camera Section -->
+        <section id="camera-section" class="section active">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-camera"></i> Professional Camera Studio</h2>
+                    <p>Capture perfect moments with our advanced photobooth technology</p>
+                </div>
+                <div class="photobooth-container">
+                    <div class="camera-area">
+                        <div class="camera-status">
+                            <div class="status-indicator">
+                                <div class="status-dot"></div>
+                                <span>Camera Ready</span>
+                            </div>
+                            <div class="camera-info">
+                                <span id="resolution-info">1920×1080 HD</span>
+                            </div>
+                        </div>
+                        <div class="camera-wrapper">
+                            <video id="video" autoplay playsinline></video>
+                            <canvas id="canvas"></canvas>
+                            <div class="camera-overlay">
+                                <div class="frame-preview" id="frame-preview"></div>
+                                <div class="countdown-overlay" id="countdown-overlay">
+                                    <div class="countdown-number" id="countdown-number">3</div>
+                                    <div class="countdown-text">Get Ready!</div>
+                                </div>
+                                <div class="photo-progress" id="photo-progress">
+                                    <div class="progress-text">Photo <span id="current-photo">1</span> of <span id="total-photos">1</span></div>
+                                    <div class="progress-dots" id="progress-dots"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="camera-controls">
+                            <button class="btn btn-primary" id="start-camera">
+                                <i class="fas fa-play"></i> Start Camera
+                            </button>
+                            <button class="btn btn-success" id="capture-btn" style="display:none;">
+                                <i class="fas fa-camera"></i> Take Photo
+                            </button>
+                            <button class="btn btn-secondary" id="stop-camera" style="display:none;">
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="controls-panel">
+                        <div class="panel-section">
+                            <h3><i class="fas fa-images"></i> Photo Count</h3>
+                            <div class="photo-count-grid">
+                                <button class="count-btn active" data-count="1">
+                                    <i class="fas fa-image"></i> 1 Photo
+                                </button>
+                                <button class="count-btn" data-count="2">
+                                    <i class="fas fa-grip-horizontal"></i> 2 Photos
+                                </button>
+                                <button class="count-btn" data-count="4">
+                                    <i class="fas fa-th"></i> 4 Photos
+                                </button>
+                                <button class="count-btn" data-count="6">
+                                    <i class="fas fa-th-large"></i> 6 Photos
+                                </button>
+                                <button class="count-btn" data-count="8">
+                                    <i class="fas fa-grip"></i> 8 Photos
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="panel-section">
+                            <h3><i class="fas fa-frame"></i> Frames</h3>
+                            <div class="frames-grid" id="frames-grid">
+                                <div class="frame-option active" data-frame="none">
+                                    <div class="frame-preview-mini">No Frame</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel-section">
+                            <h3><i class="fas fa-palette"></i> Styles</h3>
+                            <div class="styles-grid">
+                                <button class="style-btn active" data-style="normal">
+                                    <i class="fas fa-image"></i> Normal
+                                </button>
+                                <button class="style-btn" data-style="vintage">
+                                    <i class="fas fa-clock"></i> Vintage
+                                </button>
+                                <button class="style-btn" data-style="sepia">
+                                    <i class="fas fa-sun"></i> Sepia
+                                </button>
+                                <button class="style-btn" data-style="bw">
+                                    <i class="fas fa-adjust"></i> B&W
+                                </button>
+                                <button class="style-btn" data-style="pop">
+                                    <i class="fas fa-star"></i> Pop Art
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+                <!-- Upload Section -->
+        <section id="upload-section" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-cloud-upload-alt"></i> Upload & Enhance</h2>
+                    <p>Upload your photos and apply professional frames and effects</p>
+                </div>
+                <div class="upload-area">
+                    <div class="upload-zone" id="upload-zone">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3>Drop your photos here</h3>
+                        <p class="upload-text">or click to browse your files</p>
+                        <div class="upload-specs">
+                            <span><i class="fas fa-check"></i> JPG, PNG, WEBP supported</span>
+                            <span><i class="fas fa-check"></i> Up to 32MB per file</span>
+                            <span><i class="fas fa-check"></i> High-resolution processing</span>
+                        </div>
+                        <input type="file" id="file-input" multiple accept="image/*">
+                    </div>
+                    
+                    <div class="upload-controls">
+                        <div class="panel-section">
+                            <h3><i class="fas fa-images"></i> Photo Count</h3>
+                            <div class="photo-count-grid">
+                                <button class="count-btn active" data-count="1">
+                                    <i class="fas fa-image"></i> 1 Photo
+                                </button>
+                                <button class="count-btn" data-count="2">
+                                    <i class="fas fa-grip-horizontal"></i> 2 Photos
+                                </button>
+                                <button class="count-btn" data-count="4">
+                                    <i class="fas fa-th"></i> 4 Photos
+                                </button>
+                                <button class="count-btn" data-count="6">
+                                    <i class="fas fa-th-large"></i> 6 Photos
+                                </button>
+                                <button class="count-btn" data-count="8">
+                                    <i class="fas fa-grip"></i> 8 Photos
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="panel-section">
+                            <h3><i class="fas fa-frame"></i> Select Frame</h3>
+                            <div class="frames-grid" id="upload-frames-grid">
+                                <div class="frame-option active" data-frame="none">
+                                    <div class="frame-preview-mini">No Frame</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel-section">
+                            <h3><i class="fas fa-palette"></i> Select Style</h3>
+                            <div class="styles-grid">
+                                <button class="style-btn active" data-style="normal">
+                                    <i class="fas fa-image"></i> Normal
+                                </button>
+                                <button class="style-btn" data-style="vintage">
+                                    <i class="fas fa-clock"></i> Vintage
+                                </button>
+                                <button class="style-btn" data-style="sepia">
+                                    <i class="fas fa-sun"></i> Sepia
+                                </button>
+                                <button class="style-btn" data-style="bw">
+                                    <i class="fas fa-adjust"></i> B&W
+                                </button>
+                                <button class="style-btn" data-style="pop">
+                                    <i class="fas fa-star"></i> Pop Art
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery-section" class="section">
+            <div class="container">
+                <div class="gallery-header">
+                    <h2><i class="fas fa-images"></i> Your Photos</h2>
+                    <button class="btn btn-primary" id="refresh-gallery">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Gallery items will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Photo Preview Modal -->
+    <div class="modal" id="photo-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Photo Preview</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Photo preview">
+            </div>
+            <div class="modal-footer">
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button class="btn btn-danger" id="delete-btn" onclick="photoBoothApp.deleteCurrentImage()">
+                        <i class="fas fa-trash"></i> Delete
+                    </button>
+                </div>
+                <div class="print-options">
+                    <label>Print Size:</label>
+                    <select id="print-size">
+                        <option value="4x6">4x6 inches</option>
+                        <option value="5x7">5x7 inches</option>
+                        <option value="8x10">8x10 inches</option>
+                    </select>
+                    <button class="btn btn-primary" id="print-btn">
+                        <i class="fas fa-print"></i> Prepare for Print
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Processing Overlay -->
+    <div class="processing-overlay" id="processing-overlay">
+        <div class="processing-content">
+            <div class="spinner"></div>
+            <h3>Processing your photo...</h3>
+            <p>Adding frame and applying effects</p>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div class="notification-container" id="notification-container">
+        <!-- Notifications will appear here -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 PhotoBooth Studio. Create beautiful memories!</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
